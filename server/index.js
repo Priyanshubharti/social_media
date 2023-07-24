@@ -55,10 +55,10 @@ app.use("/users", userRoutes)
 app.use("/posts", postRoutes)
 
 /* MONGOOSE SETUP */
-console.log(port, mongo, jwt);
-const PORT = port || 6001;
+
+const PORT = process.env.PORT || 6001;
 mongoose
-  .connect(mongo, {
+  .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
