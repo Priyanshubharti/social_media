@@ -1,4 +1,4 @@
 /server/node_modules
 /client/node_modules
-/server/process.env
-process.env
+/server/.env
+.env
